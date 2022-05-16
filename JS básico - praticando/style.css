@@ -1,0 +1,25 @@
+* {
+    margin: 0 auto;
+    padding: 10;
+    /*É uma borda interna, como um espaço para dentro */
+    box-sizing: border-box;
+    /*Começa a contar o tamanho do elemento a partir da borda interna da caixa*/
+}
+
+body {
+    text-align: center;
+}
+
+header {
+    background-color: rgb(194, 194, 198);
+    padding: 4em;
+}
+
+main {
+    background-color: rgb(217, 240, 249);
+    padding: 4em;
+}
+
+.formulario {
+    margin-top: 5%;
+}
