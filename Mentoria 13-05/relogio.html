@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criando um relógio com JavaScript</title>
+</head>
+<body>
+
+    <!-- Criando um cabeçalho para mostrar a hora do nosso relógio -->
+    <h1 id="hora"></h1>
+
+    <!-- Construindo o script com JavaScript para a lógica do relógio -->
+    <script>
+
+        setInterval(function(){
+
+        let novaHora = new Date();
+        // Declarar as variáveis para hora, minuto e segundo
+        let hora = novaHora.getHours();
+        let minuto = novaHora.getMinutes();
+        let segundo = novaHora.getSeconds();
+
+        minuto = zero(minuto);
+        segundo=zero(segundo);
+
+        // Permite mostrar o conteúdo sendo inserido em tempo real
+        document.getElementById("hora").textContent = hora+":"+minuto+":"+segundo;
+    },1000);
+
+        function zero(contador) {
+            if(contador<10) {
+                contador = '0' + contador;
+            }return contador;
+        }
+
+    </script>
+    
+</body>
+</html>

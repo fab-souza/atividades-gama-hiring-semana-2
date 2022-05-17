@@ -1,0 +1,1 @@
+console.log("Olá seja bem vindo a nossa aula de JS com NodesJS");
