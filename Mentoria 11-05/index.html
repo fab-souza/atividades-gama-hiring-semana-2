@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gama Academy - JavaScript</title>
+
+    <!-- Criando um processo de JavaScript -->
+    <script>
+        // var nome;
+        // nome = "Ricardo Alexandre";
+
+        // A segunda mensagem depois da vírgula, aparece dentro do bloco prompt
+        // prompt("Olá, seja bem vindo, qual é o seu nome?", "Digite seu nome, por favor");
+        // alert("Seja bem vindo " + nome);
+        // var nome = prompt("Olá, seja bem vindo, qual é o seu nome?", "Digite seu nome, por favor");
+        // alert("Seja bem vindo " + nome);
+
+        // Criando a função em JS
+        function mensagem () {
+            alert('Oi, você é bem curioso, né');
+        }
+
+        function validacao() {
+            var nome = form_cad.nome_usuario.value;
+            var email = form_cad.email_usuario.value;
+            var senha = form_cad.senha_usuario.value;
+            var repete_senha = form_cad.repetir.value;
+            //alert(nome);
+            // validação do campo 'nome'
+            if(nome == "") {
+                alert("O preenchimento deste campo é obrigatório.");
+                form_cad.nome_usuario.focus();
+                return false;
+            }
+            // Validação do campo 'email'
+            if (email == "" || email.indexOf('@') == -1) {
+                alert("Por favor, preencha o campo e-mail.");
+                form_cad.email_usuario.focus();
+                return false;
+            }
+            // Validação dos campos de senha com JS
+            if (senha == "") {
+                alert("Por favor, preencha o campo senha.");
+                form_cad.senha_usuario.focus();
+                return false;
+            }
+            if (repete_senha != senha) {
+                alert("A senha precisa ser igual a senha original.");
+                form_cad.repetir.focus();
+                return false;
+            } else {
+                alert('As senha digitadas estão corretas');
+            }
+
+            
+
+            var retorno = document.getElementById("retorno").innerHTML = nome;
+            // document.writeln('prezad@ ' + nome + ' seja bem vind@ ao nosso curso, iremos enviar o conteúdo para o e-mail: ' + email);
+        }
+
+    </script>
+
+
+
+
+</head>
+<body>
+    <h3>Aula de JavaScript</h3>
+    <!-- Criando uma estrutura de formulário na página-->
+    <form id="form_cad" method="post">
+        <!-- Fieldset permite criar uma caixa, agregando os campos -->
+        <fieldset>
+            <!-- Criar uma legenda -->
+            <legend>Preencha os campos abaixo para obter mais informações</legend>
+            <br>
+            <label>Nome:</label>
+            <input type="text" name="nome_usuario"><br><br>
+            <label>E-mail:</label>
+            <input type="text" name="email_usuario"><br><br>
+            <label>Senha:</label>
+            <input type="password" name="senha_usuario"><br><br>
+            <label>Repetir senha</label>
+            <input type="password" name="repetir"><br><br>
+
+            <!-- Criando um botão para enviar os nossos campos preenchidos -->
+            <input type="submit" onclick="return validacao()" value="Enviar"><br><br>
+
+            <!-- <input type="button" onclick="mensagem()" value="Me click"> -->
+        </fieldset>
+    </form>
+
+    <p id="retorno"></p>
+
+</body>
+</html>
