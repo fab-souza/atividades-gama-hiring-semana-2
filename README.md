@@ -1,2 +1,3 @@
 # atividades-gama-hiring-semana-2
-Atividades de JavaScript
+
+Este repositório contém as atividades de JavaScript desenvolvidas nas aulas de JavaScript e nas mentorias.
